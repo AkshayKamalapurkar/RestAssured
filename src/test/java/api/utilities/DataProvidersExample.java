@@ -23,7 +23,7 @@ public class DataProvidersExample {
 		return data;
 	}
 
-	@DataProvider(name = "test1")
+	@DataProvider(name = "xyz")
 	public Object[][] getData1() throws Exception {
 		DataFormatter formatter = new DataFormatter();
 
@@ -31,7 +31,7 @@ public class DataProvidersExample {
 		fis = new FileInputStream(filepath);
 		wb = new XSSFWorkbook(fis);
 		sheet = wb.getSheet("Sheet1");
-		int rowcount = sheet.getPhysicalNumberOfRows();
+		int rowcount = sheet.getLastRowNum();
 		row = sheet.getRow(0);
 		int colcount = row.getLastCellNum();
 

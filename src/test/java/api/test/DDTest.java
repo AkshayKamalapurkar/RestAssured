@@ -4,6 +4,8 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -27,7 +29,7 @@ public class DDTest {
 		payload.setPhone(phone);
 		
 		Response res = UserEndPoints.createUser(payload);
-		Assert.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
 	}
 	
 //	@Test(priority = 2,dataProvider="UserNames",dataProviderClass = DataProviders.class)

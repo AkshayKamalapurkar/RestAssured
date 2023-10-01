@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api.test.DDTest">
+      <class name="api.test.DDTest2usingProperties">
         <methods>
           <include name="testPostUser"/>
         </methods>
-      </class> <!-- api.test.DDTest -->
+      </class> <!-- api.test.DDTest2usingProperties -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

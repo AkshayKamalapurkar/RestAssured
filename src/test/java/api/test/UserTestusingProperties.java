@@ -6,6 +6,9 @@ import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -42,7 +45,7 @@ public class UserTestusingProperties {
 	{
 		Response res = UserEndPointsusingPropertiesFile.createUser(usr);
 		res.then().log().all();
-		Assert.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
 	}
 	
 	@Test(priority=2)
@@ -50,7 +53,7 @@ public class UserTestusingProperties {
 	{
 		Response res = UserEndPointsusingPropertiesFile.getUser(this.usr.getUsername());
 		res.then().log().all();
-		Assert.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
 	}
 	
 	@Test(priority=3)
@@ -63,11 +66,11 @@ public class UserTestusingProperties {
 		
 		Response res = UserEndPointsusingPropertiesFile.updateUser(usr,this.usr.getUsername());
 		res.then().log().body();
-		Assert.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
 		
 		//checking after upgrade
 		Response resafterupdate = UserEndPointsusingPropertiesFile.getUser(this.usr.getUsername());
-		Assert.assertEquals(resafterupdate.getStatusCode(), 200);
+		AssertJUnit.assertEquals(resafterupdate.getStatusCode(), 200);
 		
 	}
 	
@@ -77,7 +80,7 @@ public class UserTestusingProperties {
 	{
 		Response res = UserEndPointsusingPropertiesFile.delUser(this.usr.getUsername());
 		res.then().log().all();
-		Assert.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
 	}
 
 }

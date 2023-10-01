@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-05T20:08:42 IST" name="Suite" finished-at="2023-09-05T20:08:45 IST" duration-ms="3834">
+  <suite started-at="2023-10-01T20:50:10 IST" name="Suite" finished-at="2023-10-01T20:50:24 IST" duration-ms="13943">
     <groups>
     </groups>
-    <test started-at="2023-09-05T20:08:42 IST" name="Test" finished-at="2023-09-05T20:08:45 IST" duration-ms="3834">
-      <class name="api.test.DDTest2usingProperties">
-        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.DDTest2usingProperties@3c22fc4c]" started-at="2023-09-05T20:08:42 IST" name="testPostUser" data-provider="test" finished-at="2023-09-05T20:08:44 IST" duration-ms="2406" status="PASS">
+    <test started-at="2023-10-01T20:50:10 IST" name="Test" finished-at="2023-10-01T20:50:24 IST" duration-ms="13943">
+      <class name="api.test.UserTest">
+        <test-method is-config="true" signature="setUpData()[pri:0, instance:api.test.UserTest@34b7ac2f]" started-at="2023-10-01T20:50:11 IST" name="setUpData" finished-at="2023-10-01T20:50:11 IST" duration-ms="373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpData -->
+        <test-method signature="TestPostUser()[pri:1, instance:api.test.UserTest@34b7ac2f]" started-at="2023-10-01T20:50:11 IST" name="TestPostUser" finished-at="2023-10-01T20:50:16 IST" duration-ms="4856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPostUser -->
+        <test-method signature="TestGetUser()[pri:2, instance:api.test.UserTest@34b7ac2f]" started-at="2023-10-01T20:50:16 IST" name="TestGetUser" finished-at="2023-10-01T20:50:17 IST" duration-ms="1493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestGetUser -->
+        <test-method signature="TestUpdateUser()[pri:3, instance:api.test.UserTest@34b7ac2f]" started-at="2023-10-01T20:50:17 IST" name="TestUpdateUser" finished-at="2023-10-01T20:50:20 IST" duration-ms="2904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestUpdateUser -->
+        <test-method signature="TestDeleteUser()[pri:4, instance:api.test.UserTest@34b7ac2f]" started-at="2023-10-01T20:50:20 IST" name="TestDeleteUser" finished-at="2023-10-01T20:50:22 IST" duration-ms="1522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestDeleteUser -->
+      </class> <!-- api.test.UserTest -->
+      <class name="api.test.DDTest">
+        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.DDTest@a9cd3b1]" started-at="2023-10-01T20:50:22 IST" name="testPostUser" data-provider="test" finished-at="2023-10-01T20:50:23 IST" duration-ms="1397" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostUser -->
-        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.DDTest2usingProperties@3c22fc4c]" started-at="2023-09-05T20:08:44 IST" name="testPostUser" data-provider="test" finished-at="2023-09-05T20:08:45 IST" duration-ms="1304" status="PASS">
+        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.DDTest@a9cd3b1]" started-at="2023-10-01T20:50:23 IST" name="testPostUser" data-provider="test" finished-at="2023-10-01T20:50:24 IST" duration-ms="1287" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -79,7 +101,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostUser -->
-      </class> <!-- api.test.DDTest2usingProperties -->
+      </class> <!-- api.test.DDTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

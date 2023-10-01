@@ -6,6 +6,9 @@ import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -41,7 +44,7 @@ public class UserTest {
 	{
 		Response res = UserEndPoints.createUser(usr);
 		res.then().log().all();
-		Assert.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
 	}
 	
 	@Test(priority=2)
@@ -49,7 +52,7 @@ public class UserTest {
 	{
 		Response res = UserEndPoints.getUser(this.usr.getUsername());
 		res.then().log().all();
-		Assert.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
 	}
 	
 	@Test(priority=3)
@@ -62,11 +65,11 @@ public class UserTest {
 		
 		Response res = UserEndPoints.updateUser(usr,this.usr.getUsername());
 		res.then().log().body();
-		Assert.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
 		
 		//checking after upgrade
 		Response resafterupdate = UserEndPoints.getUser(this.usr.getUsername());
-		Assert.assertEquals(resafterupdate.getStatusCode(), 200);
+		AssertJUnit.assertEquals(resafterupdate.getStatusCode(), 200);
 		
 	}
 	
@@ -76,7 +79,7 @@ public class UserTest {
 	{
 		Response res = UserEndPoints.delUser(this.usr.getUsername());
 		res.then().log().all();
-		Assert.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
 	}
 
 }

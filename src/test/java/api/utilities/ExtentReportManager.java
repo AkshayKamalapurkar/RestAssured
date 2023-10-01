@@ -41,28 +41,26 @@ public class ExtentReportManager implements  ITestListener {
 		extent.setSystemInfo("user", "Akshay");
 	}
 	
-	public void OnTestSuccess(ITestResult result)
-	{
+	@Override
+	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.assignCategory(result.getMethod().getGroups());
-		test.createNode(result.getName());
+		test.createNode(result.getName());		
+	}
+	
+	public void OnTestSuccess(ITestResult result)
+	{
 		test.log(Status.PASS, "Test Passed");
 	}
 	
 	public void OnTestFailure(ITestResult result)
 	{
-		test = extent.createTest(result.getName());
-		test.assignCategory(result.getMethod().getGroups());
-		test.createNode(result.getName());
 		test.log(Status.FAIL, "Test Failed");
 		test.log(Status.FAIL, result.getThrowable().getMessage());
 	}
 	
 	public void OnTestSkipped(ITestResult result)
 	{
-		test = extent.createTest(result.getName());
-		test.assignCategory(result.getMethod().getGroups());
-		test.createNode(result.getName());
 		test.log(Status.SKIP, "Test Skipped");
 		test.log(Status.SKIP, result.getThrowable().getMessage());
 	}
